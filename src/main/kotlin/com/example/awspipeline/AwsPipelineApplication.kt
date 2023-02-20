@@ -9,3 +9,7 @@ class AwsPipelineApplication
 fun main(args: Array<String>) {
     runApplication<AwsPipelineApplication>(*args)
 }
+
+fun test(){
+   print("1")
+}
