@@ -9,7 +9,10 @@ pipeline {
         }
         stage('Build') {
             steps {
-                build 'demo-pipeline-jenkins'
+                echo 'Start building project with gradlew'
+            }
+            steps {
+                sh './gradlew assemble'
             }
         }
         stage('Test') {
