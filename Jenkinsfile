@@ -9,7 +9,7 @@ pipeline {
         }
         stage('Build') {
             steps {
-                echo 'Building..'
+                build 'demo-pipeline-jenkins'
             }
         }
         stage('Test') {
