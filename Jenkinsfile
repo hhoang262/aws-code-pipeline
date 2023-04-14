@@ -9,9 +9,6 @@ pipeline {
         }
         stage('Build') {
             steps {
-                echo 'Start building project with gradlew'
-            }
-            steps {
                 sh './gradlew assemble'
             }
         }
