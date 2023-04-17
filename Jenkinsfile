@@ -17,9 +17,12 @@ pipeline {
                 sh './gradlew build'
             }
         }
-        stage('Deploy') {
+        stage('Publish to docker hub personal') {
             steps {
-                echo 'Deploying....'
+                withDockerRegistry(credentialsId: '312d534c-e1fa-474a-b89c-3fb76f48720f', url: 'https://index.docker.io/v1/'){
+                    sh 'docker build -t hoanghahuy2602/demo-pipeline'
+                    sh 'docker push hoanghahuy2602/demo-pipeline'
+                }
             }
         }
     }
