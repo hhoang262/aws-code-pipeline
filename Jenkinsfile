@@ -12,14 +12,9 @@ pipeline {
                 sh './gradlew clean'
             }
         }
-        stage('Starting build and test the project') {
+        stage('Starting build the project') {
             steps {
                 sh './gradlew build'
-            }
-        }
-        stage('Test') {
-            steps {
-                echo 'Testing..'
             }
         }
         stage('Deploy') {
